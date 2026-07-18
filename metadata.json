@@ -1,0 +1,6 @@
+{
+  "name": "Advanced ML Training Studio",
+  "description": "An interactive machine learning platform to upload CSVs, run EDA, train regression and classification models, compare performance metrics, inspect feature importance, test predictions, and download the Python/Streamlit implementation code.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

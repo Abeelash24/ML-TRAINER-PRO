@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+}
+
+/* Base styles for dark Geometric Balance theme */
+html, body, #root {
+  background-color: #0F172A !important;
+  color: #CBD5E1 !important; /* slate-300 */
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+/* Scrollbars custom styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.3);
+}
+
+/* Geometric Patterns Utilities */
+.mono {
+  font-family: 'Courier New', ui-monospace, Courier, monospace;
+}
+
+/* True Glassmorphic card styling matching Design HTML */
+.glass {
+  background: rgba(30, 41, 59, 0.7) !important;
+  border: 1px solid rgba(56, 189, 248, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 0) !important;
+  background-size: 24px 24px !important;
+  background-color: #0F172A !important;
+}
+
+/* Progress controls */
+.progress-bar {
+  height: 4px;
+  background: #1E293B !important;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #38BDF8 !important;
+}
+
+/* Target elements classes override to keep client fully styled with zero manual layout modifications */
+.bg-white {
+  background-color: rgba(30, 41, 59, 0.7) !important;
+  border-color: rgba(56, 189, 248, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+  color: #CBD5E1 !important;
+}
+
+/* Make sure container widgets have consistent rounded borders & glass styles */
+.rounded-2xl {
+  border-radius: 8px !important; /* Elegant architectural grid feel is sharp or slightly rounded */
+}
+
+.rounded-xl {
+  border-radius: 6px !important;
+}
+
+.rounded-3xl {
+  border-radius: 12px !important;
+}
+
+/* Inputs and interactive elements styling */
+select, input[type="text"], input[type="number"], select option {
+  background-color: #0B1120 !important;
+  color: #F8FAFC !important;
+  border: 1px solid rgba(56, 189, 248, 0.15) !important;
+  border-radius: 4px !important;
+}
+
+select:focus, input:focus {
+  border-color: #38BDF8 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2) !important;
+}
+
+/* Ensure raw table inputs match dark theme */
+input {
+  background-color: #0B1120 !important;
+  color: #FFFFFF !important;
+}
+
+/* Table overrides */
+tbody, tr {
+  background: transparent !important;
+}
+td {
+  color: #E2E8F0 !important;
+  border-bottom-color: rgba(56, 189, 248, 0.05) !important;
+}
+th {
+  background-color: #0B1120 !important;
+  color: #94A3B8 !important;
+  border-bottom-color: rgba(56, 189, 248, 0.15) !important;
+}
+
+/* Accent Color Overrides (Standard Tailwind Slate Override) */
+.bg-gray-50, .bg-gray-50\/50, .bg-slate-50, .bg-slate-50\/50, .bg-gray-100 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
+.border-gray-100, .border-gray-250, .border-gray-200, .border-slate-100, .border-violet-100 {
+  border-color: rgba(56, 189, 248, 0.1) !important;
+}
+
+/* Override Violet/Purple accents with Sky/Aqua */
+.text-violet-600, .text-violet-700, .text-indigo-600, .text-indigo-700 {
+  color: #38BDF8 !important;
+}
+
+.text-violet-400, .text-indigo-400 {
+  color: #7DD3FC !important;
+}
+
+.bg-violet-600, .bg-indigo-600 {
+  background-color: #0EA5E9 !important; /* sky-500 */
+  color: #ffffff !important;
+}
+.bg-violet-600:hover, .bg-indigo-600:hover {
+  background-color: #38BDF8 !important; /* sky-400 */
+}
+
+.bg-violet-50, .bg-indigo-50, .bg-violet-50\/70, .bg-indigo-50\/70 {
+  background-color: rgba(56, 189, 248, 0.1) !important;
+  color: #38BDF8 !important;
+}
+
+.bg-violet-500\/20 {
+  background-color: rgba(56, 189, 248, 0.15) !important;
+}
+
+.border-violet-400\/20, .border-violet-200 {
+  border-color: rgba(56, 189, 248, 0.2) !important;
+}
+
+.text-violet-200 {
+  color: #93C5FD !important;
+}
+
+.text-gray-900, .text-gray-800, .text-slate-900, .text-slate-800, .text-gray-750, .text-gray-700 {
+  color: #F8FAFC !important;
+}
+
+.text-gray-400 {
+  color: #64748B !important;
+}
+
+/* Home Welcome banner custom layout gradient */
+.from-violet-600 {
+  --tw-gradient-from: #1E293B !important;
+  --tw-gradient-to: rgb(30 41 59 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #0F172A !important;
+}
+.via-indigo-600 {
+  --tw-gradient-to: rgb(15 23 42 / 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #0F172A !important;
+}
+.to-indigo-700 {
+  --tw-gradient-to: #0F172A !important;
+}
+
+/* Accurate status/checkmark components badges */
+.bg-emerald-50, .bg-emerald-500\/20 {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  color: #34D399 !important;
+}
+.text-emerald-500, .text-emerald-600, .text-emerald-700 {
+  color: #34D399 !important;
+}
+
+/* Sliders elements and range indicators */
+input[type="range"] {
+  accent-color: #38BDF8 !important;
+}
+
+/* Highlight boxes */
+.bg-rose-5, .bg-rose-50 {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  color: #F87171 !important;
+}
